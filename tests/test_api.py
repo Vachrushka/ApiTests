@@ -45,6 +45,7 @@ def test_get_order():
     allure.attach(str(response.status_code), "Response Status Code", allure.attachment_type.TEXT)
     allure.attach(response.text, "Response Content", allure.attachment_type.TEXT)
 
+
 @allure.story("Delete order")
 def test_delete_order():
     response = requests.delete(f'{base_url}/store/order/{order_id}')
